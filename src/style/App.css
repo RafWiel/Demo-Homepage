@@ -1,4 +1,14 @@
-#root {
+.navbar {
+  height: 6em; 
+  background-color: aqua;
+}
+
+.navbar-logo {
+  height: 1.5em;  
+  margin-left: 1em;
+}
+
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -39,4 +49,4 @@
 
 .read-the-docs {
   color: #888;
-}
+} */
