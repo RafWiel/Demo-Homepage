@@ -1,8 +1,11 @@
 //import { useState } from 'react'
 //import reactLogo from './assets/react.svg'
 //import viteLogo from '/vite.svg'
-import './style/App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+//import 'bootstrap/dist/css/bootstrap.min.css';
+import './assets/custom.scss';
+import './assets/app.css';
+import './assets/fonts.css';
+
 import NavBar from './components/NavBar';
 import { Route, Switch} from 'wouter';
 import About from './pages/About.tsx';

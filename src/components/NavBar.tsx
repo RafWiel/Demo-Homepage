@@ -1,4 +1,4 @@
-import '../style/navbar.css';
+import '../assets/navbar.css';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import NavDropdown from 'react-bootstrap/NavDropdown';
@@ -10,23 +10,17 @@ import logo from '/demo-logo.svg';
 
 
 const NavBar = () => {
-    return (
-        <Navbar className="navbar" expand="sm" >
-            <Container className="navbar-container">
+    return (        
+        <Navbar expand="sm" className="navbar">
+            <Container fluid>
                 <Link href="/">
                     <Navbar.Brand>
                         <img src={logo} className="navbar-logo" alt="logo" />
                     </Navbar.Brand>
                 </Link>
-                <Container className="navbar-buttons-container">
-                    <Button
-                        variant="primary"
-                        className="px-5">
-                        test
-                    </Button>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="navbar-buttons">                   
+                        <Nav className="justify-content-center flex-grow-1 navbar-buttons">                   
                             <NavDropdown title="FIRMA">
                                 <Link href="/about">
                                     <NavDropdown.Item>O NAS</NavDropdown.Item>
@@ -55,24 +49,15 @@ const NavBar = () => {
                             <Link href="/implementations">
                                 <Nav.Link>REALIZACJE</Nav.Link>
                             </Link>                    
-                        </Nav>
-                    </Navbar.Collapse>
-                    <Link href="/solutions">
-                                <Nav.Link>ROZWIĄZANIA</Nav.Link>
-                            </Link>
-                    <Button
-                        variant="primary"
-                        className="px-5">
-                        test
-                    </Button>
-                </Container>
-                <Button
-                    variant="primary"
-                    className="px-5">
-                    Napisz do nas
-                </Button>
+                        </Nav>                        
+                        <Button
+                            variant="primary"                            
+                            className="px-4 me-3">
+                            NAPISZ DO NAS
+                        </Button>
+                    </Navbar.Collapse>                                                    
             </Container>
-        </Navbar>
+        </Navbar>        
     );
 }
 
