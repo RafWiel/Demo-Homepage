@@ -18,11 +18,12 @@ import PrivacyPolicy from './pages/PrivacyPolicy.tsx';
 import Services from './pages/Services.tsx';
 import Software from './pages/Software.tsx';
 import Solutions from './pages/Solutions.tsx';
+import { Container } from 'react-bootstrap';
 
 function App() {  
   return (
     <div className="App">
-      <NavBar />       
+      <NavBar />            
       <main>
         <Switch>
           <Route path="/"><Home /></Route>
@@ -39,7 +40,7 @@ function App() {
         </Switch>
         {/* <MessageModal message={message} close={closeMessage} />
         {isLoadingIcon && <LoadingIcon />} */}
-      </main>    
+      </main>         
     </div>
   )
 }

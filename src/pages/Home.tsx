@@ -1,8 +1,9 @@
+import MainImage from "../components/home/MainImage";
+
 const Home = () => {
     return (
         <>  
-            NavBar XS <br />
-            MainImage <br />
+            <MainImage />            
         </>
     );
 }
