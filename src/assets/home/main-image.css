@@ -7,17 +7,10 @@
     width: 100%;
     height: 700px;
     z-index: 0;
-    background-color: aliceblue;
+    background-color: yellow;
 }
 
-/* .mi-image {
-    position: absolute;
-    width: 100%;
-    height: 700px;
-    z-index: 0;
-} */
-
-/* .mi-text-1 {
+.mi-text-1 {
     position: absolute;
     z-index: 1;
     font-family: 'Montserrat', sans-serif;
@@ -30,9 +23,9 @@
     height: 2.5em;
     overflow: hidden;
     animation: slideRight 3s ease-out, fadeIn 3s ease-in;
-} */
+}
 
-/* .mi-text-2 {
+.mi-text-2 {
     position: absolute;
     z-index: 1;
     font-family: 'Montserrat', sans-serif;
@@ -44,9 +37,9 @@
     height: 5em;
     overflow: hidden;
     animation: slideLeft 3s ease-out, fadeIn 3s ease-in;
-} */
+}
 
-/* .mi-button {
+.mi-button {
     position: absolute;
     z-index: 1;
     margin: 450px 0 0 15%;
@@ -54,30 +47,30 @@
     animation-delay: 3s;
     animation-fill-mode: forwards;
     opacity: 0;
-} */
+} 
 
-/* @media (min-width: 1800px) {
+@media (min-width: 1800px) {
     .mi-text-2 {
         width: 30%;
     }
-} */
+} 
 
-/* @media (min-width: 1024px) and (max-width: 1800px) {
+@media (min-width: 1024px) and (max-width: 1800px) {
     .mi-text-2 {
         width: 50%;
     }
-} */
+} 
 
-/* @media (max-width: 960px) {
+@media (max-width: 960px) {
     .mi-text-1 {
         font-size: 2.5em;
     }
     .mi-text-2 {
         width: 75%;
     }
-} */
+} 
 
-/* @media (max-width: 600px) {
+@media (max-width: 600px) {
     :root {
         --slide-stop: 5%;
     }
@@ -103,9 +96,9 @@
     .mi-button {
         margin: 280px 0 0 5%;
     }
-} */
+} 
 
-/* @keyframes slideLeft {
+@keyframes slideLeft {
     from {
         margin-left: 100%;
     }
@@ -121,4 +114,4 @@
     to {
         margin-left: --slide-stop;
     }
-} */
+} 

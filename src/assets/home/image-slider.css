@@ -1,5 +1,8 @@
 .is-container {
+    position: relative;
+    width: 100%;
     height: 700px;
+    z-index: 0;
     background: #e0e0e0;
     overflow: hidden;
 }
@@ -29,4 +32,13 @@
     .is-container, .is-image {
         height: 400px;
     }
+}
+
+.is-temp-text {
+    position: absolute;
+    z-index: 10;
+    font-size: .7em;
+    color: #f0f0f0;
+    margin: 10px 0 0 10px;
+    width: 70%;    
 }
