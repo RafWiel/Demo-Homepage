@@ -2,13 +2,15 @@ import '../../assets/home/image-slider.css';
 import { useState, useEffect, useRef } from 'react';
 
 type Props = {
-    images: Array<string>
+    images: Array<string>,
+    mobileImages: Array<string>,
 }
 
-const ImageSlider = ({images}: Props) => {
+const ImageSlider = ({images, mobileImages}: Props) => {
     const imageIndex = useRef(1);
     const currentImageIndex = useRef(false);
-    const slideTimer = useRef(0);    
+    const slideTimer = useRef(0);   
+    const isMobile = useRef(window.innerWidth <= 768);
     
     useEffect(() => {        
         animate(document.querySelector('.is-image') as HTMLImageElement);
@@ -19,11 +21,18 @@ const ImageSlider = ({images}: Props) => {
           document.querySelector('.hidden')?.classList.remove('hidden');
         }, 1000);
 
-
+        //switch mobile or desktop images
+        window.addEventListener('resize', handleResize);
+        
         return () => {   
             clearTimeout(slideTimer.current);
+            window.removeEventListener('resize', handleResize);
         };
     }, []);
+
+    function handleResize() {
+        isMobile.current = window.innerWidth <= 768;
+    }
 
     function slide() {
         const slides:NodeListOf<HTMLImageElement> = document.querySelectorAll('.is-image');
@@ -43,10 +52,12 @@ const ImageSlider = ({images}: Props) => {
         //load next image
         setTimeout(() => {
             imageIndex.current++
-            if (imageIndex.current > images.length - 1) imageIndex.current = 0
-                    
-            slides[+!currentImageIndex.current].src = `/src/assets/${images[imageIndex.current]}`;
-            //slides[+!currentImageIndex.current].src = new URL(`/src/assets/${images[imageIndex.current]}`, import.meta.url);            
+            if (imageIndex.current > images.length - 1) {
+                imageIndex.current = 0
+            }
+
+            slides[+!currentImageIndex.current].src = getImageUrl(imageIndex.current); 
+            console.log(isMobile.current, getImageUrl(imageIndex.current));           
         }, 1000);
             
         slideTimer.current = setTimeout(() => { slide() }, 3000);
@@ -77,34 +88,29 @@ const ImageSlider = ({images}: Props) => {
     }
     
     function getImageUrl(index: number) {
-        //unit test fails with INVALID_URL
         try {
+            if (isMobile.current) {
+                return `/src/assets/${mobileImages[index]}`; 
+            }
+
             return `/src/assets/${images[index]}`;
             //return new URL(`/src/assets/${images[index]}`, import.meta.url)
         }
         catch {
             return '';
         }
-      }
-
-    //load
-    useEffect(() => {
-        console.log(images);        
-    }, []);
+    }
 
     return (        
         <div className="is-container">
             <img 
-                src={getImageUrl(0)}                
+                src={getImageUrl(0)}                                
                 className="is-image top"  
                 alt="" />
             <img 
                 src={getImageUrl(1)}
                 className="is-image bottom hidden"  
-                alt="" />
-            <div className="is-temp-text">
-                {getImageUrl(0)}
-            </div>            
+                alt="" />            
         </div>    
     );
 }
