@@ -57,7 +57,7 @@ const ImageSlider = ({images, mobileImages}: Props) => {
             }
 
             slides[+!currentImageIndex.current].src = getImageUrl(imageIndex.current); 
-            console.log(isMobile.current, getImageUrl(imageIndex.current));           
+            //console.log(isMobile.current, getImageUrl(imageIndex.current));           
         }, 1000);
             
         slideTimer.current = setTimeout(() => { slide() }, 3000);

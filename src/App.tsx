@@ -18,7 +18,6 @@ import PrivacyPolicy from './pages/PrivacyPolicy.tsx';
 import Services from './pages/Services.tsx';
 import Software from './pages/Software.tsx';
 import Solutions from './pages/Solutions.tsx';
-import { Container } from 'react-bootstrap';
 
 function App() {  
   return (
