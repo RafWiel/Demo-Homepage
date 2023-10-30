@@ -4,12 +4,13 @@ import Button from 'react-bootstrap/Button';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-
 import { Link } from 'wouter';
 import logo from '/demo-logo.svg';
-
+import { useLocation } from 'wouter';
 
 const NavBar = () => {
+    const [location, ] = useLocation();
+
     return (               
         <Navbar expand="md" className="navbar">
             <Container fluid>
@@ -20,7 +21,12 @@ const NavBar = () => {
                 </Link>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="justify-content-center flex-grow-1">                   
+                    <Nav
+                        activeKey={location} 
+                        className="justify-content-center flex-grow-1">                   
+                        <Link href="/">
+                            <Nav.Link>HOME</Nav.Link>
+                        </Link>
                         <NavDropdown title="FIRMA">
                             <Link href="/about">
                                 <NavDropdown.Item>O NAS</NavDropdown.Item>

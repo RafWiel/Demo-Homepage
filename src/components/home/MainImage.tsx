@@ -1,6 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import '../../assets/home/main-image.css';
 import ImageSlider from './ImageSlider';
+import { Link } from 'wouter';
 
 const MainImage = () => {      
     return (
@@ -32,16 +33,15 @@ const MainImage = () => {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dignissim feugiat eros a eleifend. Praesent tincidunt lacus ornare, efficitur sem sed, fringilla odio. Ut sed euismod nunc. 
             </div>
             <div className="mi-button">
-                <Button
-                    variant="primary"                            
-                    type="button"
-                    size="lg"
-                    className="px-4"
-                    // router
-                    // to="solutions"                    
-                    >
-                    ROZWIĄZANIA
-                </Button> 
+                <Link href="/solutions">                                    
+                    <Button
+                        variant="primary"                            
+                        type="button"
+                        size="lg"
+                        className="px-4">
+                        ROZWIĄZANIA
+                    </Button> 
+                </Link>
             </div>
             
         </div>

@@ -25,7 +25,7 @@ function App() {
       <NavBar />            
       <main>
         <Switch>
-          <Route path="/"><Home /></Route>
+          <Route path="/"><Home /></Route>          
           <Route path="/about"><About /></Route>
           <Route path="/contact"><Contact /></Route>
           <Route path="/implementations"><Implementations /></Route>
