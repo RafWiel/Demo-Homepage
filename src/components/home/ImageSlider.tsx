@@ -31,11 +31,11 @@ const ImageSlider = ({images, mobileImages}: Props) => {
         };
     }, []);
 
-    function handleResize() {
+    const handleResize = () => {
         isMobile.current = window.innerWidth <= 768;
     }
 
-    function slide() {
+    const slide = () => {
         console.log(moment(new Date()).format('hh:mm:ss'), 'slide');
         const slides:NodeListOf<HTMLImageElement> = document.querySelectorAll('.is-image');
             
@@ -65,7 +65,7 @@ const ImageSlider = ({images, mobileImages}: Props) => {
         slideTimeout.current = setTimeout(() => { slide() }, 3000);
     }
     
-    function animate(image: HTMLImageElement) {
+    const animate = (image: HTMLImageElement) => {
         if (!image) return;
 
         const fadeIn = [
@@ -89,7 +89,7 @@ const ImageSlider = ({images, mobileImages}: Props) => {
         })
     }
     
-    function getImageUrl(index: number) {
+    const getImageUrl = (index: number) => {
         try {
             if (isMobile.current) {
                 return `/src/assets/${mobileImages[index]}`; 
