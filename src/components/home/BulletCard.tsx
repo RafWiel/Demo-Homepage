@@ -39,7 +39,7 @@ const MainCards = ({image, title, text, route}: Props) => {
             </div>
             <div className="bc-link-container">                
                 <Link href={route}>
-                    <Nav.Link>Czytaj dalej {'>'}</Nav.Link>
+                    <Nav.Link>CZYTAJ DALEJ {'>'}</Nav.Link>
                 </Link>
             </div>             
         </div>

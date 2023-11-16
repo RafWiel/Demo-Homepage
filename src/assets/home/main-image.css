@@ -30,7 +30,7 @@
     width: 70%;
     height: 2.5em;
     overflow: hidden;
-    animation: slideRight 3s ease-out, fadeIn 3s ease-in;
+    animation: mi-slideRight 3s ease-out, fadeIn 3s ease-in;
 }
 
 .mi-text-2 {
@@ -44,7 +44,7 @@
     width: 70%;
     height: 5em;
     overflow: hidden;
-    animation: slideLeft 3s ease-out, fadeIn 3s ease-in;
+    animation: mi-slideLeft 3s ease-out, fadeIn 3s ease-in;
 }
 
 .mi-button {
@@ -106,7 +106,7 @@
     }
 } 
 
-@keyframes slideLeft {
+@keyframes mi-slideLeft {
     from {
         margin-left: 100%;
     }
@@ -115,7 +115,7 @@
     }
 }
 
-@keyframes slideRight {
+@keyframes mi-slideRight {
     from {
         margin-left: -600px;
     }

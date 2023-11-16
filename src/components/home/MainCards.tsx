@@ -11,7 +11,7 @@ const MainCards = () => {
                 <Row>
                     <Col
                         cols="12"
-                        md="4">                                                    
+                        lg="4">                                                    
                         <BulletCard
                             image="card_projects.jpg"
                             title="Projekty"
@@ -20,7 +20,7 @@ const MainCards = () => {
                     </Col>
                     <Col
                         cols="12"
-                        md="4">                            
+                        lg="4">                            
                         <BulletCard 
                             image="card_services.jpg"
                             title="Usługi"
@@ -29,7 +29,7 @@ const MainCards = () => {
                     </Col>
                     <Col
                         cols="12"
-                        md="4">                            
+                        lg="4">                            
                         <BulletCard
                             image="card_maintenance.jpg"
                             title="Serwis"
