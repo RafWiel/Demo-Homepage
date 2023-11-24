@@ -36,7 +36,7 @@ const ImageSlider = ({images, mobileImages}: Props) => {
     }
 
     const slide = () => {
-        console.log(moment(new Date()).format('hh:mm:ss'), 'slide');
+        //console.log(moment(new Date()).format('hh:mm:ss'), 'slide');
         const slides:NodeListOf<HTMLImageElement> = document.querySelectorAll('.is-image');
             
         //switch current image

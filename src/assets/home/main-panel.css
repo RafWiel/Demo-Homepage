@@ -8,6 +8,7 @@
     position: relative;
     display: flex;
     width: 80%;
+    height: 500px;
     flex-wrap: no-wrap;
     margin: auto;
     
@@ -32,6 +33,11 @@
     width: 100%;
 }
 
+.mp-text-container {
+    position: relative;
+    height: auto;    
+}
+
 .mp-text {
     position: absolute;
     font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -49,7 +55,7 @@
     color: #405050;
     margin: 20vh 10% 0 10%;
     width: 80%;
-    list-style-image: url("@/assets/circle.svg");
+    list-style-image: url("/src/assets/circle.svg");
     opacity: 0;
 }
 

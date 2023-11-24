@@ -3,14 +3,17 @@
 .mc-main-container {
     position: relative;
     width: 100%;
-    height: 600px;
+    height: 500px;
     overflow: hidden;
     margin-top: -80px;
-    z-index: 1;         
+    z-index: 1;        
   }
 
-.mc-container {    
+.mc-container {          
+    max-width: 100%;
     animation: mc-slideUp 4s ease-out, fadeIn 3s ease-in;    
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 @keyframes mc-slideUp {
@@ -19,6 +22,12 @@
     }
     to {
         margin-top: 0px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .mc-main-container {
+        height: 600px;
     }
 }
 
@@ -34,13 +43,14 @@
     } 
 
     .mc-container {    
-        max-width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;        
     }   
 }
 
 @media (max-width: 576px) {
   .mc-main-container {
-    margin-top: -40px;
+    margin-top: -45px;
     height: 1560px;
   }    
 }
