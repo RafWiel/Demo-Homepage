@@ -1,6 +1,5 @@
 import '../../assets/home/image-slider.css';
 import { useEffect, useRef } from 'react';
-import moment from 'moment';
 
 type Props = {
     images: Array<string>,
@@ -10,12 +9,12 @@ type Props = {
 const ImageSlider = ({images, mobileImages}: Props) => {
     const imageIndex = useRef(1);
     const currentImageIndex = useRef(false);
-    const slideTimeout = useRef(0);   
+    const timerRef = useRef(0);   
     const isMobile = useRef(window.innerWidth <= 768);
     
     useEffect(() => {        
         animate(document.querySelector('.is-image') as HTMLImageElement);
-        slideTimeout.current = setTimeout(() => { slide() }, 3000);
+        timerRef.current = setTimeout(() => { slide() }, 3000);
     
         //remove hidden from bottom image
         setTimeout(() => {
@@ -26,7 +25,7 @@ const ImageSlider = ({images, mobileImages}: Props) => {
         window.addEventListener('resize', handleResize);
         
         return () => {   
-            clearTimeout(slideTimeout.current);
+            clearTimeout(timerRef.current);
             window.removeEventListener('resize', handleResize);
         };
     }, []);
@@ -62,7 +61,7 @@ const ImageSlider = ({images, mobileImages}: Props) => {
             //console.log(isMobile.current, getImageUrl(imageIndex.current));           
         }, 1000);
             
-        slideTimeout.current = setTimeout(() => { slide() }, 3000);
+        timerRef.current = setTimeout(() => { slide() }, 3000);
     }
     
     const animate = (image: HTMLImageElement) => {

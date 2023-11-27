@@ -11,8 +11,7 @@
     height: 500px;
     flex-wrap: no-wrap;
     margin: auto;
-    
-    background-color: azure;            
+    margin-top: 5%;            
 }
 
 .mp-left-section {
