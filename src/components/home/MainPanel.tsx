@@ -4,7 +4,7 @@ import { useInView } from 'react-intersection-observer';
 const MainPanel = () => {   
     const { ref, inView } = useInView({
         triggerOnce: true
-      });
+    });
 
     return (
         <div ref={ref} className="mp-container">            

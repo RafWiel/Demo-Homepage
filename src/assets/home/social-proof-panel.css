@@ -1,0 +1,119 @@
+@import '../keyframes.css';
+
+.spp-container {
+    width: 80%;
+    display: flex;
+    flex-wrap: no-wrap;
+    margin: auto;
+    margin-top: 5%;
+    
+    background-color: aliceblue;
+}
+
+.spp-left-section {
+    width: 30%;
+    height: 500px;
+    margin-right: 10%;
+    overflow: hidden;    
+}
+
+.spp-image {
+    height: 550px;
+    object-fit: cover;
+    object-position: center center;
+    opacity: 0;
+}
+
+.spp-right-section {
+    width: 60%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.spp-title-container {
+    overflow: hidden;
+    height: 30%;
+}
+
+.spp-title {
+    font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #203040;
+    text-align: center;
+    margin-top: 5vh;
+    width: 100%;
+}
+
+.spp-card-slider {
+    overflow: hidden;
+    height: 70%;
+}
+
+@media (max-width: 1280px) {
+    .spp-container {
+        width: 100%;
+}
+
+    .spp-left-section {
+        width: 50%;
+        margin-right: 0;
+    }
+
+    .spp-right-section {
+        width: 50%;
+    }
+}
+
+@media (max-width: 960px) {
+    .spp-container {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .spp-left-section {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .spp-right-section {
+        width: 100%;
+    }
+
+    .spp-title {
+        font-size: 2em;
+    }
+
+    .spp-image {
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .spp-title-animation {
+        animation: spp-slideDown 3s ease-out, fadeIn 3s ease-in;
+    }
+
+    .spp-image-animation {
+        animation: fadeIn 1s ease-in, spp-scaleDown 3s ease-out;
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes spp-slideDown {
+    from {
+        margin-top: -10vh;
+    }
+    to {
+        margin-top: 5vh;
+    }
+}
+
+@keyframes spp-scaleDown {
+    from {
+        transform: scale(1.2);
+    }
+    to {
+        transform: scale(1.0);
+    }
+  }
