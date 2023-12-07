@@ -1,0 +1,46 @@
+@import '../fonts.css';
+@import '../keyframes.css';
+
+.cqc-container {
+    display: flex;
+    height: 100%;
+    background-color: #ffffff80;
+    color: #203040;
+}
+
+.cqc-left-section {
+    width: 20%;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 100px;
+    text-align: center;
+}
+
+.cqc-right-section {
+    width: 80%;
+    height: 100%;
+}
+
+.cqc-text {
+    display: flex;
+    height: 70%;
+    padding-right: 10%;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+}
+
+.cqc-signature-container {
+    height: 30%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1.2em;
+
+}
+
+.cqc-signature {
+    width: 50%;
+    margin-left: 35%;
+    text-align: center;
+}
+

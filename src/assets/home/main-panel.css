@@ -7,11 +7,10 @@
 .mp-container {    
     position: relative;
     display: flex;
-    width: 80%;
-    height: 500px;
+    width: 80%;    
     flex-wrap: no-wrap;
     margin: auto;
-    margin-top: 5%;            
+    margin-top: 5%;        
 }
 
 .mp-left-section {
@@ -90,7 +89,7 @@
     }
   }
 
-  @media (max-width: 960px) {
+@media (max-width: 960px) {
     :root {
         --list-slide-up: 55%;
     }
@@ -130,7 +129,7 @@
     }
   }
 
-  @media (max-width: 600px) {
+@media (max-width: 600px) {
     .mp-right-section {
         width: 100%;
         height: 400px;

@@ -1,5 +1,6 @@
 import '../../assets/home/social-proof-panel.css';
 import { useInView } from 'react-intersection-observer';
+import CardSlider from './CardSlider';
 
 const SocialProofPanel = () => {
     const { ref, inView } = useInView({
@@ -19,7 +20,7 @@ const SocialProofPanel = () => {
                         Co mówią o nas klienci?
                     </div>
                 </div>
-                {/* <card-slider ref="cardSlider" class="spp-card-slider"/> */}
+                <CardSlider />                
             </div>
         </div>
     );

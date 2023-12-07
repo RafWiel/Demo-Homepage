@@ -8,7 +8,7 @@ const Home = () => {
     return (
         <>  
             <MainImage />
-            <MainCards />
+            <MainCards />            
             <MainPanel />
             <ExperienceBanner />
             <SocialProofPanel />
