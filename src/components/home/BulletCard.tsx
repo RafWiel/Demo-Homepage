@@ -1,6 +1,5 @@
 import { Link } from 'wouter';
 import '../../assets/home/bullet-card.css';
-import Button from 'react-bootstrap/Button';
 import { Nav } from 'react-bootstrap';
 
 type Props = {

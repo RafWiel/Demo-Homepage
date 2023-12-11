@@ -7,10 +7,10 @@ type Props = {
 }
 
 const ImageSlider = ({images, mobileImages}: Props) => {
-    const imageIndex = useRef(1);
-    const currentImageIndex = useRef(false);
+    const imageIndexRef = useRef(1);
+    const currentImageIndexRef = useRef(false);
     const timerRef = useRef(0);   
-    const isMobile = useRef(window.innerWidth <= 768);
+    const isMobileRef = useRef(window.innerWidth <= 768);
     
     useEffect(() => {        
         animate(document.querySelector('.is-image') as HTMLImageElement);
@@ -31,7 +31,7 @@ const ImageSlider = ({images, mobileImages}: Props) => {
     }, []);
 
     const handleResize = () => {
-        isMobile.current = window.innerWidth <= 768;
+        isMobileRef.current = window.innerWidth <= 768;
     }
 
     const slide = () => {
@@ -39,26 +39,26 @@ const ImageSlider = ({images, mobileImages}: Props) => {
         const slides:NodeListOf<HTMLImageElement> = document.querySelectorAll('.is-image');
             
         //switch current image
-        currentImageIndex.current = !currentImageIndex.current;            
+        const index = currentImageIndexRef.current = !currentImageIndexRef.current;            
             
         //set z-order
-        slides[+!currentImageIndex.current].classList.remove('top');
-        slides[+!currentImageIndex.current].classList.add('bottom');
-        slides[+currentImageIndex.current].classList.add('top');
-        slides[+currentImageIndex.current].classList.remove('bottom');
+        slides[+!index].classList.remove('top');
+        slides[+!index].classList.add('bottom');
+        slides[+index].classList.add('top');
+        slides[+index].classList.remove('bottom');
             
         //start animations
-        animate(slides[+currentImageIndex.current]);
+        animate(slides[+index]);
     
         //load next image
         setTimeout(() => {
-            imageIndex.current++
-            if (imageIndex.current > images.length - 1) {
-                imageIndex.current = 0
+            imageIndexRef.current++
+            if (imageIndexRef.current > images.length - 1) {
+                imageIndexRef.current = 0
             }
 
-            slides[+!currentImageIndex.current].src = getImageUrl(imageIndex.current); 
-            //console.log(isMobile.current, getImageUrl(imageIndex.current));           
+            slides[+!index].src = getImageUrl(imageIndexRef.current); 
+            //console.log(isMobileRef.current, getImageUrl(imageIndex.current));           
         }, 1000);
             
         timerRef.current = setTimeout(() => { slide() }, 3000);
@@ -90,7 +90,7 @@ const ImageSlider = ({images, mobileImages}: Props) => {
     
     const getImageUrl = (index: number) => {
         try {
-            if (isMobile.current) {
+            if (isMobileRef.current) {
                 return `/src/assets/${mobileImages[index]}`; 
             }
 
