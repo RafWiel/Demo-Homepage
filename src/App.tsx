@@ -6,7 +6,7 @@ import './assets/custom.scss';
 import './assets/app.css';
 import './assets/fonts.css';
 
-import NavBar from './components/NavBar';
+import NavBar from './components/NavBar.tsx';
 import { Route, Switch} from 'wouter';
 import About from './pages/About.tsx';
 import Home from './pages/Home.tsx';
@@ -18,6 +18,7 @@ import PrivacyPolicy from './pages/PrivacyPolicy.tsx';
 import Services from './pages/Services.tsx';
 import Software from './pages/Software.tsx';
 import Solutions from './pages/Solutions.tsx';
+import Footer from './components/Footer.tsx';
 
 function App() {  
   return (
@@ -39,7 +40,8 @@ function App() {
         </Switch>
         {/* <MessageModal message={message} close={closeMessage} />
         {isLoadingIcon && <LoadingIcon />} */}
-      </main>         
+      </main>
+      <Footer />         
     </div>
   )
 }
