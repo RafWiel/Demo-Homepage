@@ -22,9 +22,10 @@ import Footer from './components/Footer.tsx';
 
 function App() {  
   return (
-    <div className="App">
-      <NavBar />            
-      <main>
+    <div className="app">
+      <NavBar />      
+      <h1>Footer mobile</h1>            
+      <main className="main">
         <Switch>
           <Route path="/"><Home /></Route>          
           <Route path="/about"><About /></Route>
@@ -41,7 +42,8 @@ function App() {
         {/* <MessageModal message={message} close={closeMessage} />
         {isLoadingIcon && <LoadingIcon />} */}
       </main>
-      <Footer />         
+      <Footer />
+      
     </div>
   )
 }

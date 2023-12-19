@@ -11,6 +11,8 @@
     font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 15px;
     line-height: 2em;
+
+    
 }
 
 a {
@@ -34,7 +36,12 @@ ul {
 
 .ft-mid-section {
     margin-top: 50px;
-    font-weight: 700;
+    font-weight: 400;
+}
+
+.ft-contact {
+    margin-top: 20px;
+    margin-left: -30px;
 }
 
 .ft-right-section {

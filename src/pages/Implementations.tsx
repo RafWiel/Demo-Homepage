@@ -1,8 +1,8 @@
 const Implementations = () => {
     return (
-        <>  
+        <div>  
             Implementations
-        </>
+        </div>
     );
 }
 
