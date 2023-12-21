@@ -1,6 +1,3 @@
-//import { useState } from 'react'
-//import reactLogo from './assets/react.svg'
-//import viteLogo from '/vite.svg'
 //import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/custom.scss';
 import './assets/app.css';
@@ -24,7 +21,7 @@ function App() {
   return (
     <div className="app">
       <NavBar />      
-      <h1>Footer mobile</h1>            
+      {/* <h1>Footer mobile</h1>             */}
       <main className="main">
         <Switch>
           <Route path="/"><Home /></Route>          

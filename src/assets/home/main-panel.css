@@ -1,7 +1,7 @@
 @import '../keyframes.css';
 
 :root {
-    --list-slide-up: 25%;
+    --list-slide-up: 25vh;
 }
 
 .mp-container {    
@@ -51,9 +51,9 @@
     font-size: 14px;
     list-style-position: inside;
     color: #405050;
-    margin: 20vh 10% 0 10%;
+    margin: 25vh 10% 0 10%;
     width: 80%;
-    list-style-image: url("/src/assets/circle.svg");
+    list-style-image: url("/src/assets/images/circle.svg");
     opacity: 0;
 }
 
@@ -82,16 +82,12 @@
 
     .mp-title {
         font-size: 2.1em;
-    }
-
-    .mp-list {
-        margin: 25vh 10% 0 10%;
-    }
+    }    
   }
 
 @media (max-width: 960px) {
     :root {
-        --list-slide-up: 55%;
+        --list-slide-up: 25vh;
     }
 
     .mp-container {
@@ -188,7 +184,7 @@
         margin-top: 100%;
     }
     to {
-        margin-top: --list-slide-up;
+        margin-top: var(--list-slide-up);
     }
 }
 
