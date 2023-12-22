@@ -1,0 +1,61 @@
+@import 'fonts.css';
+@import 'keyframes.css';
+
+.hi-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hi-image {
+    position: absolute;
+    width: 101%;
+    height: 210px;
+    object-fit: cover;
+    object-position: center center;
+    filter: blur(3px) saturate(50%) brightness(85%);
+}
+
+.hi-title {
+    font-family: 'Montserrat', Arial;
+    font-size: 32px;
+    font-weight: 600;
+    color: white;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .hi-image-animation {
+        animation: fadeIn 1s ease-in, hi-scaleDown 1s ease-out;
+        animation-fill-mode: forwards;
+        opacity: 0;
+    }
+
+    .hi-text-animation {
+        animation: fadeIn .5s ease-in, hi-scaleUp .5s ease-out;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+        opacity: 0;
+    }
+}
+
+@keyframes hi-scaleDown {
+    from {
+        transform: scale(1.05);
+    }
+    to {
+        transform: scale(1.0);
+    }
+}
+
+@keyframes hi-scaleUp {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1.0);
+    }
+}

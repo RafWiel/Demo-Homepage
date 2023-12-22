@@ -1,13 +1,14 @@
 import '../assets/privacy-policy/privacy-policy.css';
 import HeaderImage from '../components/HeaderImage';
 
+
 const PrivacyPolicy = () => {
     return (        
         <div className="pp-container">
             <HeaderImage 
-                imagePath="/src/assets/privacy-policy/privacy-policy.jpg"
+                imagePath="/src/assets/privacy-policy/images/privacy_policy.jpg"
                 title="Polityka prywatności"/>            
-            <div className="pp-text-container text-animation">
+            <div className="pp-text-container pp-text-animation">
                 <p className="pp-p-header">§ 1</p>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut lectus arcu bibendum at varius vel pharetra vel turpis. Magna eget est lorem ipsum dolor sit amet consectetur adipiscing. Sollicitudin nibh sit amet commodo nulla. Diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Neque volutpat ac tincidunt vitae. Id donec ultrices tincidunt arcu non. Pulvinar sapien et ligula ullamcorper. Amet nisl purus in mollis nunc sed id semper risus. Vestibulum sed arcu non odio euismod lacinia at quis risus. Sed vulputate odio ut enim blandit volutpat maecenas volutpat blandit. Eget nunc lobortis mattis aliquam faucibus purus in massa. Nulla pharetra diam sit amet nisl suscipit adipiscing. Tempus iaculis urna id volutpat lacus. Odio eu feugiat pretium nibh ipsum consequat nisl. Lorem ipsum dolor sit amet consectetur. Dolor sit amet consectetur adipiscing elit. Semper feugiat nibh sed pulvinar proin gravida hendrerit lectus. Magnis dis parturient montes nascetur.

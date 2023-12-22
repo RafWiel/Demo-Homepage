@@ -29,7 +29,7 @@
   }
 
   @media (prefers-reduced-motion: no-preference) {
-    .text-animation {
+    .pp-text-animation {
       animation: fadeIn 1s ease-in;
     }
   }

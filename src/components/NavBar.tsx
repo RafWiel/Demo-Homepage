@@ -12,7 +12,7 @@ const NavBar = () => {
     const [location, ] = useLocation();
 
     return (               
-        <Navbar expand="md" className="navbar">
+        <Navbar expand="md" className="navbar" sticky="top">
             <Container fluid>
                 <Link href="/">
                     <Navbar.Brand>

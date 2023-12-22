@@ -16,12 +16,14 @@ import Services from './pages/Services.tsx';
 import Software from './pages/Software.tsx';
 import Solutions from './pages/Solutions.tsx';
 import Footer from './components/Footer.tsx';
+import ScrollToTop from './components/ScrollToTop.tsx';
 
 function App() {  
   return (
     <div className="app">
       <NavBar />      
       {/* <h1>Footer mobile</h1>             */}
+      <ScrollToTop />
       <main className="main">
         <Switch>
           <Route path="/"><Home /></Route>          

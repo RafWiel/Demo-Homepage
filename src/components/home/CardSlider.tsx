@@ -31,12 +31,12 @@ const CardSlider = forwardRef<CardSliderRef>((_props, ref) => {
     
             //run animation
             animateIn(document.querySelector('.cs-card'));
-            setTimeout(() => { slide() }, 7000);
+            timerRef.current = setTimeout(() => { slide() }, 7000);
     
             //remove hidden from bottom card
             setTimeout(() => {
                 document.querySelector('.hidden')?.classList.remove('hidden')
-            }, 7000)
+            }, 7000);
         }
     }));   
 
