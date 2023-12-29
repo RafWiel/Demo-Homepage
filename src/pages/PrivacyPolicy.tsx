@@ -6,7 +6,7 @@ const PrivacyPolicy = () => {
     return (        
         <div className="pp-container">
             <HeaderImage 
-                imagePath="/src/assets/privacy-policy/images/privacy_policy.jpg"
+                imagePath="/src/assets/privacy-policy/images/header.jpg"
                 title="Polityka prywatności"/>            
             <div className="pp-text-container pp-text-animation">
                 <p className="pp-p-header">§ 1</p>

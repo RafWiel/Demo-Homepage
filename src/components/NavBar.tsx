@@ -7,6 +7,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'wouter';
 import logo from '/demo-logo.svg';
 import { useLocation } from 'wouter';
+import routes from '../routes.ts';
 
 const NavBar = () => {
     const [location, ] = useLocation();
@@ -24,36 +25,39 @@ const NavBar = () => {
                     <Nav
                         activeKey={location} 
                         className="justify-content-center flex-grow-1">                   
-                        <Link href="/">
-                            <Nav.Link>HOME</Nav.Link>
-                        </Link>
+                        <Link href={routes.home}>
+                            <Nav.Link>{routes.getTextUpper(routes.home)}</Nav.Link>
+                        </Link>                        
                         <NavDropdown title="FIRMA">
-                            <Link href="/about">
-                                <NavDropdown.Item>O NAS</NavDropdown.Item>
+                            <Link href={routes.about}>
+                                <NavDropdown.Item>{routes.getTextUpper(routes.about)}</NavDropdown.Item>
                             </Link>
-                            <Link href="/jobs">
-                                <NavDropdown.Item>PRACA</NavDropdown.Item>
+                            <Link href={routes.jobs}>
+                                <NavDropdown.Item>{routes.getTextUpper(routes.jobs)}</NavDropdown.Item>
                             </Link>
-                            <Link href="/contact">
-                                <NavDropdown.Item>KONTAKT</NavDropdown.Item>
+                            <Link href={routes.contact}>
+                                <NavDropdown.Item>{routes.getTextUpper(routes.contact)}</NavDropdown.Item>
                             </Link>                        
                         </NavDropdown>                    
                         <NavDropdown title="OFERTA">
-                            <Link href="/services">
+                            <Link href="/contact/solutions/software">
                                 <NavDropdown.Item>USŁUGI</NavDropdown.Item>
                             </Link>
-                            <Link href="/software">
-                                <NavDropdown.Item>OPROGRAMOWANIE</NavDropdown.Item>
-                            </Link>                        
-                            <Link href="/maintenance">  
-                                <NavDropdown.Item>SERWIS</NavDropdown.Item>
+                            <Link href={routes.services}>
+                                <NavDropdown.Item>{routes.getTextUpper(routes.services)}</NavDropdown.Item>
+                            </Link>
+                            <Link href={routes.software}>
+                                <NavDropdown.Item>{routes.getTextUpper(routes.software)}</NavDropdown.Item>
+                            </Link>
+                            <Link href={routes.maintenance}>  
+                                <NavDropdown.Item>{routes.getTextUpper(routes.maintenance)}</NavDropdown.Item>
                             </Link>                        
                         </NavDropdown>
-                        <Link href="/solutions">
-                            <Nav.Link>ROZWIĄZANIA</Nav.Link>
+                        <Link href={routes.solutions}>
+                            <Nav.Link>{routes.getTextUpper(routes.solutions)}</Nav.Link>
                         </Link>
-                        <Link href="/implementations">
-                            <Nav.Link>REALIZACJE</Nav.Link>
+                        <Link href={routes.implementations}>
+                            <Nav.Link>{routes.getTextUpper(routes.implementations)}</Nav.Link>
                         </Link>                    
                     </Nav>                        
                     <Button

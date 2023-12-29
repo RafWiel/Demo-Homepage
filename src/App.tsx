@@ -17,6 +17,7 @@ import Software from './pages/Software.tsx';
 import Solutions from './pages/Solutions.tsx';
 import Footer from './components/Footer.tsx';
 import ScrollToTop from './components/ScrollToTop.tsx';
+import routes from './routes.ts';
 
 function App() {  
   return (
@@ -26,16 +27,17 @@ function App() {
       <ScrollToTop />
       <main className="main">
         <Switch>
-          <Route path="/"><Home /></Route>          
-          <Route path="/about"><About /></Route>
-          <Route path="/contact"><Contact /></Route>
-          <Route path="/implementations"><Implementations /></Route>
-          <Route path="/jobs"><Jobs /></Route>
-          <Route path="/maintenance"><Maintenance /></Route>
-          <Route path="/privacy-policy"><PrivacyPolicy /></Route>
-          <Route path="/services"><Services /></Route>
-          <Route path="/software"><Software /></Route>
-          <Route path="/solutions"><Solutions /></Route>
+          <Route path={routes.home}><Home /></Route>          
+          <Route path={routes.about}><About /></Route>
+          <Route path={routes.contact}><Contact /></Route>
+          <Route path={routes.implementations}><Implementations /></Route>
+          <Route path={routes.jobs}><Jobs /></Route>
+          <Route path={routes.maintenance}><Maintenance /></Route>
+          <Route path={routes.privacyPolicy}><PrivacyPolicy /></Route>
+          {/* <Route path={routes.services}><Services /></Route> */}
+          <Route path='/contact/solutions/software'><Services /></Route>
+          <Route path={routes.software}><Software /></Route>
+          <Route path={routes.solutions}><Solutions /></Route>
           <Route>404, Not Found!</Route>
         </Switch>
         {/* <MessageModal message={message} close={closeMessage} />
