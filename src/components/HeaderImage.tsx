@@ -19,8 +19,7 @@ const HeaderImage = ({ imagePath, title }: Props) => {
         <div className="hi-container">
             <img 
                 className="hi-image hi-image-animation" 
-                src={imagePath} 
-                loading="eager"
+                src={imagePath}                 
                 alt="" />
             <div className="hi-text">
                 <div className="hi-title hi-title-animation">
