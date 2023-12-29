@@ -40,9 +40,6 @@ const NavBar = () => {
                             </Link>                        
                         </NavDropdown>                    
                         <NavDropdown title="OFERTA">
-                            <Link href="/contact/solutions/software">
-                                <NavDropdown.Item>USŁUGI</NavDropdown.Item>
-                            </Link>
                             <Link href={routes.services}>
                                 <NavDropdown.Item>{routes.getTextUpper(routes.services)}</NavDropdown.Item>
                             </Link>

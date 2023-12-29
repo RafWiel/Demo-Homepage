@@ -1,6 +1,6 @@
 import '../assets/header-image.css';
 import { Link, useLocation } from 'wouter';
-import routes from './routes.ts';
+import routes from '../routes.ts';
 
 type Props = {
     imagePath: string,
@@ -10,8 +10,10 @@ type Props = {
 const HeaderImage = ({ imagePath, title }: Props) => {
     const [location, ] = useLocation();
 
-    const parts = location.split('/');
-    console.log(parts);
+    const links = location.split('/').map((item) => {
+        item = '/' + item;        
+        return item;
+    });
 
     return (
         <div className="hi-container">
@@ -24,15 +26,15 @@ const HeaderImage = ({ imagePath, title }: Props) => {
                 <div className="hi-title hi-title-animation">
                     {title}                    
                 </div>
-                <div className="hi-links hi-links-animation mt-4">{location}</div>
                 <div className="hi-links hi-links-animation mt-4">
-                    <Link href="/">
-                        Home
-                    </Link> 
-                    <span>&nbsp;&gt;&nbsp;</span>
-                    <Link href="/services">
-                        Usługi
-                    </Link> 
+                    {
+                        links && links.map((item, i, {length}) => (
+                            <Link key={item} href={item} >
+                                {routes.getText(item)}
+                                { (i < length - 1) ? ' > ' : '' }                                                                
+                            </Link> 
+                        ))                    
+                    }
                 </div>
             </div>    
         </div>

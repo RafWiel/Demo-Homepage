@@ -34,8 +34,7 @@ function App() {
           <Route path={routes.jobs}><Jobs /></Route>
           <Route path={routes.maintenance}><Maintenance /></Route>
           <Route path={routes.privacyPolicy}><PrivacyPolicy /></Route>
-          {/* <Route path={routes.services}><Services /></Route> */}
-          <Route path='/contact/solutions/software'><Services /></Route>
+          <Route path={routes.services}><Services /></Route>          
           <Route path={routes.software}><Software /></Route>
           <Route path={routes.solutions}><Solutions /></Route>
           <Route>404, Not Found!</Route>
