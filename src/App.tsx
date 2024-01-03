@@ -18,6 +18,7 @@ import Solutions from './pages/Solutions.tsx';
 import Footer from './components/Footer.tsx';
 import ScrollToTop from './components/ScrollToTop.tsx';
 import routes from './routes.ts';
+import NotFound from './pages/NotFound.tsx';
 
 function App() {  
   return (
@@ -37,7 +38,7 @@ function App() {
           <Route path={routes.services}><Services /></Route>          
           <Route path={routes.software}><Software /></Route>
           <Route path={routes.solutions}><Solutions /></Route>
-          <Route>404, Not Found!</Route>
+          <Route><NotFound /></Route>
         </Switch>
         {/* <MessageModal message={message} close={closeMessage} />
         {isLoadingIcon && <LoadingIcon />} */}
